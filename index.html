@@ -80,7 +80,7 @@
       }
       .hms {
         font-size: 1.5rem;
-        padding: 0.6rem 2rem;
+        padding: 0.6rem 1.3rem;
       }
       button {
         position: absolute;
@@ -96,12 +96,68 @@
         font-size: 1.9rem;
         padding: 0.5rem;
       }
+      img{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 2px;
+        margin: auto;
+        display: block;
+        border: 20px solid rgb(4,4,44);
+      }
+      .cir{
+        animation: round .5s alternate-reverse infinite;
+      }
+      @keyframes round{
+        100%{
+            transform: scale(1.3);
+        }
+      }
+      @media(max-width:768px){
+        .container{
+            width: 100vw;
+            height: 100vh;
+            left: 0;
+            background: transparent;
+            margin:0;
+            overflow:hidden;
+        }
+        img{
+            width: 15rem;
+            height: 15rem;
+            z-index: -1;
+            position: relative;
+            top:16rem;
+        }
+        #time{
+            position: relative;
+            top: 25rem;
+        }
+        .sectors{
+            position: relative;
+            top: 30rem;
+        }
+        .container::after{
+            width: 12rem;
+            height: 12rem;
+            border-radius: 50%;
+            bottom: 0;
+            right: 0;
+        }
+        .container::before{
+            width: 12rem;
+            height: 12rem;
+            border-radius: 50%;
+            bottom: 3rem;
+            right: 14rem;
+        }
+
+      }
     </style>
     <script defer src="index.js"></script>
   </head>
   <body>
     <div class="container">
-      <img src="" alt="" class="img" />
+      <img src="Clcimg.jpg" alt="" class="img " />
       <h1 id="time">01:48:23 PM</h1>
       <div class="sectors">
         <div class="hours">
@@ -232,7 +288,7 @@
           </select>
         </div>
       </div>
-      <div class="btn"><button>Set Alarm</button></div>
+      <!-- <div class="btn"><button>Set Alarm</button></div> -->
     </div>
   </body>
 </html>

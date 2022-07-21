@@ -26,6 +26,7 @@ if(m==mv && h==hv && apv==apv){
     // alert('time start');
     beep.play();
     console.log('timer started')
+    document.querySelector('img').classList.add('cir');
 }
 
 // console.log(m);
